@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プログラム・スケジュール - 令和7年度（仮）浜松北高校学校祭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- サイドバー -->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="event-info.html">イベント情報</a></li>
+                <li><a href="program.html">プログラム・スケジュール</a></li>
+                <li><a href="sales.html">物品販売情報</a></li>
+                <li><a href="access.html">アクセス情報</a></li>
+                <li><a href="gallery.html">ギャラリー</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="news.html">お知らせ</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>プログラム・スケジュール</h1>
+        <p>以下は学校祭のプログラムです：</p>
+        <ul>
+            <li>10:00 - 開会式</li>
+            <li>10:30 - クラス展示</li>
+            <li>12:00 - 昼休み</li>
+            <li>13:00 - ステージパフォーマンス</li>
+            <li>16:00 - 閉会式</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
