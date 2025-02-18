@@ -3,12 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - 令和7年度（仮）浜松北高校学校祭</title>
-    <link rel="stylesheet" href="style.css">
+    <title>イベント情報 - 令和7年度（仮）浜松北高校学校祭HP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h1 a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border: none;
+        }
+
+        .video-container {
+            margin: 20px 0;
+        }
+
+        /* サイドバーのスタイル */
+        .sidebar {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            transition: 0.3s;
+            overflow-x: hidden;
+            z-index: 1000;
+        }
+
+        /* ハンバーガーメニューアイコンを黒に */
+        .sidebar-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            z-index: 1001;
+        }
+
+        .sidebar-content {
+            margin-top: 60px;
+        }
+
+        .sidebar-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar-content li {
+            text-align: center;
+        }
+
+        .sidebar-content a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            background-color: #444;
+            transition: 0.3s;
+        }
+
+        .sidebar-content a:hover {
+            background-color: #575757;
+        }
+
+        /* サイドバーが開いたとき */
+        .sidebar.open {
+            left: 0;
+        }
+
+        /* メインコンテンツのスタイル */
+        .content {
+            margin-left: 20px;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- サイドバー -->
+
+    <!-- サイドバーのトグルボタン -->
     <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
+    <!-- サイドバー -->
     <div class="sidebar">
         <div class="sidebar-content">
             <ul>
@@ -23,7 +120,11 @@
         </div>
     </div>
 
-    <div class="content">
+    <!-- タイトル -->
+    <h1><a href="index.html">令和7年度（仮）浜松北高校学校祭HP</a></h1>
+
+    <!-- イベント情報 -->
+     <div class="content">
         <h1>FAQ（よくある質問）</h1>
         <h2>Q: 学校祭の入場料はかかりますか？</h2>
         <p>A: 入場は無料です。</p>
@@ -36,10 +137,12 @@
     </div>
 
     <script>
+        // サイドバーを開閉する関数
         function toggleSidebar() {
             const sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('open');
         }
     </script>
+
 </body>
 </html>
